@@ -18,7 +18,7 @@ print(thislist)
 thislist = ["apple", "banana", "cherry"]
 mylist = thislist[:] # : is used to copy the list
 print(mylist)
-# Output: ['apple', 'banana', 'cherry']
+
 thislist = ["apple", "banana", "cherry"]
 mylist = thislist.copy()
 print(mylist)
