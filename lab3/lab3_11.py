@@ -1,7 +1,7 @@
 def is_palindrome(s):
-    # Remove spaces and convert to lowercase for uniformity
+    # это функция, которая проверяет, является ли строка палиндромом
     s = s.replace(" ", "").lower()
-    # Check if the string is equal to its reverse
+    # удаляем пробелы и приводим к нижнему регистру
     return s == s[::-1]
 example=input()
 word = "madam"
