@@ -1,7 +1,7 @@
 import json
 
 with open("sampledata.json", encoding="utf-8") as file:
-    data = json.load(file)
+    data = json.load(file) 
 print("Interface Status")
 print("=" * 80)
 print(f"{'DN':<50} {'Description':<20} {'Speed':<7} {'MTU':<7}")

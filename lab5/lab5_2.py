@@ -1,11 +1,10 @@
 import re
 
-def match_string(text):
-    pattern = r'ab*'
-    if re.fullmatch(pattern, text):
+def match_pattern(text):
+    pattern = r'.*ab{2,3}'
+    if re.match(pattern, text):
         return True
     else:
         return False
-
 s=input()
-print(match_string(s))
+print(match_pattern(s))
