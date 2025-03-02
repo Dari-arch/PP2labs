@@ -1,7 +1,7 @@
 import math
 
 def trapezoid_area(height, base1, base2):
-    return math.fabs(height * (base1 + base2) / 2)
+    return (height * (base1 + base2)) / 2
 
 height = int(input())
 base1 = int(input())
