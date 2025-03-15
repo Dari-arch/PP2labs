@@ -1,20 +1,20 @@
 import pygame
 
-# Initialize pygame
+
 pygame.init()
 
-# Screen settings
+
 WIDTH, HEIGHT = 500, 500
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Moving Ball")
 
-# Ball settings
+
 BALL_RADIUS = 25
 BALL_COLOR = (255, 0, 0)
 ball_x, ball_y = WIDTH // 2, HEIGHT // 2
 MOVE_DISTANCE = 20
 
-# Main loop
+
 running = True
 while running:
     pygame.time.delay(50)

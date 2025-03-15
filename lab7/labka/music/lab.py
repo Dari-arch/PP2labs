@@ -1,25 +1,24 @@
 import pygame
 import os
 
-# Initialize pygame mixer and pygame
+
 pygame.init()
 pygame.mixer.init()
 
-# Screen setup
+
 WIDTH, HEIGHT = 400, 300
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Music Player")
 
-# Load songs
-songs = ["song1.mp3", "song2.mp3", "song3.mp3"]  # Убедитесь, что файлы существуют
+
+songs = ["song1.mp3", "song2.mp3", "song3.mp3"]  
 current_song = 0
 
-# Colors
+
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 BUTTON_COLOR = (100, 200, 255)
 
-# Function to draw buttons
 def draw_button(text, x, y, w, h):
     pygame.draw.rect(screen, BUTTON_COLOR, (x, y, w, h))
     font = pygame.font.Font(None, 36)
@@ -28,7 +27,7 @@ def draw_button(text, x, y, w, h):
     screen.blit(text_surface, text_rect)
     return pygame.Rect(x, y, w, h)
 
-# Function to play music
+
 def play_music():
     if not os.path.exists(songs[current_song]):
         print(f"Error: File {songs[current_song]} not found!")
@@ -36,32 +35,32 @@ def play_music():
     pygame.mixer.music.load(songs[current_song])
     pygame.mixer.music.play()
 
-# Function to stop music
+
 def stop_music():
     pygame.mixer.music.stop()
 
-# Function to play next song
+
 def next_song():
     global current_song
     current_song = (current_song + 1) % len(songs)
     play_music()
 
-# Function to play previous song
+
 def prev_song():
     global current_song
     current_song = (current_song - 1) % len(songs)
     play_music()
 
-# Print current directory and files to debug
+
 print("Current directory:", os.getcwd())
 print("Files in directory:", os.listdir(os.getcwd()))
 
-# Main loop
+
 running = True
 while running:
     screen.fill(WHITE)
     
-    # Draw buttons
+    
     play_button = draw_button("Play", 50, 200, 80, 50)
     stop_button = draw_button("Stop", 150, 200, 80, 50)
     next_button = draw_button("Next", 250, 200, 80, 50)
